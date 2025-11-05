@@ -1,0 +1,647 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d68741;
+    padding: 10px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* MENU PRINCIPAL */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+/* SUBMENU */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #e0954e;
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+.submenu li {
+    padding: 8px 20px;
+}
+
+.submenu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+/* BOTÕES EXTRAS */
+.extras {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão "Doe Agora" */
+.botao-doar {
+    background-color: #e0954e;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-doar:hover {
+    background-color: #f0a85a;
+}
+
+/* Ícone de pesquisa */
+.botao-pesquisa {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    background: #000;
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    /* Esconde menu e extras por padrão */
+    .menu,
+    .extras {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #d68741;
+        margin-top: 10px;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+ 
+    .menu.active,
+    .extras.active {
+        display: flex;
+    }
+
+    .submenu {
+        position: static;
+        margin-top: 5px;
+        background-color: #e0954e;
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    color: #fff;
+    overflow: hidden;
+}
+
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    filter: brightness(65%);
+    z-index: 0;
+}
+
+/* Conteúdo do banner */
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+    padding: 0 5%;
+    text-align: right;
+    max-width: 600px;
+}
+
+/* Texto principal */
+.banner-conteudo h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+/* Subtítulo */
+.banner-conteudo p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Botão */
+.botao-banner {
+    margin-top: 20px;
+    background-color: #e0954e;
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-banner:hover {
+    background-color: #f0a85a;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        min-height: 60vh;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 2.2rem;
+    }
+
+    .banner-conteudo p {
+        font-size: 1.2rem;
+    }
+
+    .botao-banner {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+.aba-evento{
+    justify-content: center;
+    text-align: center;
+    color: #ff7b00;
+    
+}
+
+.text {
+    justify-content: center;
+    text-align: center;
+    color: #575757;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.text2 {
+    color: #ff7b00
+}
+
+.text3 {
+    color: #575757
+    
+}
+.card1 {
+  display: block;
+  width: 260px; /* ajuste conforme o layout */
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.card1:hover {
+  transform: scale(1.03);
+}
+
+/* Parte da imagem */
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Parte inferior (ícone + texto) */
+.card-content {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.card-icon {
+  width: 50px;
+  margin: 0 auto 10px;
+}
+
+.card-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto */
+.card-content h2 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza na horizontal */
+  gap: 20px; /* espaçamento entre os cards */
+  padding: 20px;
+}
+
+.card1 {
+  flex: 1 1 260px; /* mantém responsivo */
+  max-width: 260px;
+}
+
+.separador-faixa {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(224, 149, 78, 0.25);
+  margin: 50px auto;
+  border-radius: 1px;
+}
+
+.history{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+
+.email{
+    justify-content: center;
+    text-align: center;
+    color: #575757;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 400px; /* Largura máxima para centralizar o conteúdo */
+    text-align: center;
+    margin-left: 730px;
+    
+}
+
+.title {
+    color: #ff8c00; 
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.newsletter-form input[type="email"],
+.newsletter-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1em;
+}
+
+/* Foco nos campos */
+.newsletter-form input:focus {
+    border-color: #ff8c00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #ff8c00; 
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e67e00; 
+}
+
+.confirmation-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+.footer {
+  background-color: #4b4a4a; /* cinza escuro */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-col h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.05);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff7b00;
+}
+
+.footer-separator {
+  width: 90%;
+  margin: 25px auto;
+  border: 0.5px solid #ccc;
+  opacity: 0.4;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links span {
+  opacity: 0.7;
+}
+
+
+/* Botão flutuante de chat */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff8c00;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Pop-up do chat */
+.chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h4 {
+  margin: 0;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 15px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.chat-form button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.donation-button {
+  position: fixed;
+  bottom: 90px; /* acima do botão de chat */
+  right: 20px;
+  background-color: #e60023;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.donation-button:hover {
+  background-color: #c3001c;
+}
+
+
+.inscricao {
+  background-image: url("/assets/Rectangle\ 14.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.inscricao p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.botao-inscricao {
+  display: inline-block;
+  background-color: white;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.botao-inscricao:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.05);
+}
+

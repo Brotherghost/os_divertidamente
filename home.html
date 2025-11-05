@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/assets/LogoKolping.png" alt="Logo">
+      </div>
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li>
+          <a href="#">Quem Somos</a>
+          <ul class="submenu">
+            <li><a href="#">História</a></li>
+            <li><a href="#">Missão e Valores</a></li>
+            <li><a href="#">Equipe</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Seja Membro</a>
+          <ul class="submenu">
+            <li><a href="#">Voluntário</a></li>
+            <li><a href="#">Parceiro</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Trabalhe Conosco</a></li>
+        <li><a href="#">Beneficiários</a></li>
+      </ul>
+      <div class="extras">
+        <button type="button" class="botao-doar">Doe Agora!</button>
+        <button type="button" class="botao-pesquisa" title="Pesquisar">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <img src="/assets/banner.png" alt="Imagem do banner" class="banner-img">
+    <div class="banner-conteudo"></div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador-faixa"></div>
+
+  <!-- TEXTO CENTRAL -->
+  <section class="texto-centro">
+    <div class="text">Juntos, criamos caminhos
+      <div class="text2">para um futuro
+        <div class="text3">sem pobreza</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador-faixa"></div>
+
+  <div class="aba-evento">
+    <h2>Eventos</h2>
+  </div>
+
+
+  <section class="secao-cards">
+    <div class="card-container">
+      <!-- Card 1 -->
+      <a href="#" class="card1">
+        <div class="card-image">
+          <img src="/assets/aviao_child.jpg" alt="Imagem do card">
+        </div>
+        <div class="card-content">
+          <div class="card-icon">
+            <img src="/assets/miudo.png" alt="Ícone do card">
+          </div>
+          <h2>Desenvolvimento de<br>crianças e adolescentes</h2>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#" class="card1">
+        <div class="card-image">
+          <img src="/assets/donation.jpg" alt="Imagem do card">
+        </div>
+        <div class="card-content">
+          <div class="card-icon">
+            <img src="/assets/cesta-de-compras.png" alt="Ícone do card">
+          </div>
+          <h2>Educação e bem-estar</h2>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#" class="card1">
+        <div class="card-image">
+          <img src="/assets/retrato-de-voluntarios-que-organizaram-doacoes-para-instituicoes-de-caridade.jpg"
+            alt="Imagem do card">
+        </div>
+        <div class="card-content">
+          <div class="card-icon">
+            <img src="/assets/comunidade.png" alt="Ícone do card">
+          </div>
+          <h2>Desenvolvimento comunitário</h2>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="#" class="card1">
+        <div class="card-image">
+          <img src="/assets/acao.jpg" alt="Imagem do card">
+        </div>
+        <div class="card-content">
+          <div class="card-icon">
+            <img src="/assets/lista-de-controle.png" alt="Ícone do card">
+          </div>
+          <h2>Eventos comunitários</h2>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SEPARADOR -->
+  <div class="separador-faixa"></div>
+
+  <div class="aba-evento">
+    <h2>História real</h2>
+  </div>
+
+  <div class="history">
+    <img src="/assets/real_history.png">
+  </div>
+
+  <div class="separador-faixa"></div>
+
+  <section class="inscricao">
+  <p>Deseja ser atendido na Casa Kolping?</p>
+  <a href="#" class="botao-inscricao">INSCREVA-SE AQUI</a>
+</section>
+
+<div class="separador-faixa"></div>
+
+  <div class="email">
+    <h2>
+      Para saber mais sobre a Casa Kolping? Ative seu e-mail
+    </h2>
+  </div>
+
+   <div class="separador-faixa"></div>
+
+  <div class="form-container">
+    <h2 class="title">Cuidado em Rede</h2>
+    <p class="subtitle">Receba a newsletter da Casa Kolping no seu e-mail</p>
+
+    <form action="#" method="POST" class="newsletter-form">
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+
+      <button type="submit" class="submit-btn">Inscreva-se !</button>
+    </form>
+
+    <p class="confirmation-text">Confira seu e-mail para confirmar sua inscrição</p>
+  </div>
+
+  <!-- Botão de chat -->
+<div class="chat-button" id="chatButton">
+  💬
+</div>
+
+<!-- Janela do chat -->
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-header">
+    <h4>Atendimento</h4>
+    <button id="closeChat">×</button>
+  </div>
+  <div class="chat-body">
+    <p>Olá! Como podemos ajudar?</p>
+  </div>
+  <form class="chat-form">
+    <input type="text" placeholder="Digite sua mensagem..." required>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+<!-- Botão de chat -->
+<div class="chat-button" id="chatButton">
+  💬
+</div>
+
+<!-- Janela do chat -->
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-header">
+    <h4>Atendimento</h4>
+    <button id="closeChat">×</button>
+  </div>
+  <div class="chat-body">
+    <p>Olá! Como podemos ajudar?</p>
+  </div>
+  <form class="chat-form">
+    <input type="text" placeholder="Digite sua mensagem..." required>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+
+<div class="donation-button">
+  💝 Doe Agora
+</div>
+
+
+</body>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-info">
+      <div class="footer-col">
+        <h4>Endereço</h4>
+        <p>Rua: Casa Kolping, 7888</p>
+        <p>04999-78, São Paulo – SP</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horário de atendimento</h4>
+        <p>Segunda a Sexta-feira</p>
+        <p>Das 08:30 às 18:30</p>
+      </div>
+    </div>
+
+    <div class="footer-buttons">
+      <button class="footer-btn">
+        <i class="fa-solid fa-envelope"></i> FALE CONOSCO
+      </button>
+      <button class="footer-btn">
+        <i class="fa-solid fa-headphones"></i> OUVIDORIA
+      </button>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <hr class="footer-separator">
+
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <span>|</span>
+      <a href="#">Termos de Aceite</a>
+    </div>
+    <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
+  </div>
+</footer>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+</html>
