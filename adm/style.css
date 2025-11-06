@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d68741;
+    padding: 10px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* MENU PRINCIPAL */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+/* SUBMENU */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #e0954e;
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+.submenu li {
+    padding: 8px 20px;
+}
+
+.submenu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+/* BOTÕES EXTRAS */
+.extras {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão "Doe Agora" */
+.botao-doar {
+    background-color: #e0954e;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-doar:hover {
+    background-color: #f0a85a;
+}
+
+/* Ícone de pesquisa */
+.botao-pesquisa {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    background: #000;
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    /* Esconde menu e extras por padrão */
+    .menu,
+    .extras {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #d68741;
+        margin-top: 10px;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+ 
+    .menu.active,
+    .extras.active {
+        display: flex;
+    }
+
+    .submenu {
+        position: static;
+        margin-top: 5px;
+        background-color: #e0954e;
+    }
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 40px auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #e49b66;
+  border-radius: 25px;
+  width: 400px;
+  height: 45px;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 0 10px;
+  color: #000;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  stroke: #2d2d2d;
+  transition: 0.2s;
+}
+
+.search-button:hover .icon {
+  stroke: #000;
+  transform: scale(1.1);
+}
+
+/* Estilo do filtro */
+.filter-select {
+  background-color: #e49b66;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+}
+
+.filter-select:hover {
+  background-color: #f1b27b;
+}
+
+
+
+
+
+
+
+.tabela-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.tabela-box {
+  background-color: #e49b66;
+  border-radius: 20px;
+  padding: 0px 0 20px;
+  overflow: hidden;
+}
+
+.tabela-box h2 {
+  text-align: center;
+  background-color: #b86a3d;
+  color: black;
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  font-size: 20px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.tabela thead {
+  background-color: #e49b66;
+  font-weight: bold;
+}
+
+.tabela th, .tabela td {
+  padding: 8px 6px;
+  text-align: left;
+  color: #2d2d2d;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background-color: #f1b27b;
+}
+
+.icon-cell {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a15a2b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon-cell:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+.footer {
+  background-color: #4b4a4a; /* cinza escuro */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-col h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background-color: #f2f2f2;
+  transform: scale(1.05);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff7b00;
+}
+
+.footer-separator {
+  width: 90%;
+  margin: 25px auto;
+  border: 0.5px solid #ccc;
+  opacity: 0.4;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links span {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
