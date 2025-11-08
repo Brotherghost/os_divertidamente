@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d68741;
+    padding: 10px 25px;
+    z-index: 1000;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* MENU PRINCIPAL */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+/* SUBMENU - REGRAS CORRIGIDAS */
+nav ul.menu li {
+    position: relative;
+}
+
+nav ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #d68741;
+    top: 100%; /* Inicia exatamente na borda do LI pai */
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1100;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* MANTÉM O SUBMENU VISÍVEL quando o mouse está sobre o item LI PAI OU sobre o próprio SUBMENU */
+nav ul.menu li:hover>ul.submenu,
+nav ul.menu li ul.submenu:hover {
+    display: block;
+}
+
+nav ul.menu li ul.submenu li {
+    padding: 8px 20px;
+}
+
+nav ul.menu li ul.submenu li a {
+    color: white;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul.menu li ul.submenu li a:hover {
+    background-color: #e0954e;
+}
+
+
+/* BOTÕES EXTRAS */
+.extras {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão "Doe Agora" */
+.botao-doar {
+    background-color: #e0954e;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-doar:hover {
+    background-color: #f0a85a;
+}
+
+/* MENU HAMBÚRGUER (Regras para Responsividade) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    background: #000;
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    /* Esconde menu e extras por padrão */
+    .menu,
+    .extras {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #d68741;
+        margin-top: 10px;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active,
+    .extras.active {
+        display: flex;
+    }
+
+    .submenu {
+        position: static;
+        margin-top: 5px;
+        background-color: #e0954e;
+    }
+}

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +15,11 @@ body {
 header {
     background-color: #d68741;
     padding: 10px 25px;
+<<<<<<< HEAD
+=======
+    z-index: 1000;
+    position: relative;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 nav {
@@ -46,6 +54,7 @@ nav {
     color: #fff;
 }
 
+<<<<<<< HEAD
 /* SUBMENU */
 .submenu {
     display: none;
@@ -70,6 +79,49 @@ nav {
     display: block;
 }
 
+=======
+/* SUBMENU - REGRAS CORRIGIDAS */
+nav ul.menu li {
+    position: relative;
+}
+
+nav ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #d68741;
+    top: 100%; /* Inicia exatamente na borda do LI pai */
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1100;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* MANTÉM O SUBMENU VISÍVEL quando o mouse está sobre o item LI PAI OU sobre o próprio SUBMENU */
+nav ul.menu li:hover>ul.submenu,
+nav ul.menu li ul.submenu:hover {
+    display: block;
+}
+
+nav ul.menu li ul.submenu li {
+    padding: 8px 20px;
+}
+
+nav ul.menu li ul.submenu li a {
+    color: white;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul.menu li ul.submenu li a:hover {
+    background-color: #e0954e;
+}
+
+
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 /* BOTÕES EXTRAS */
 .extras {
     display: flex;
@@ -93,6 +145,7 @@ nav {
     background-color: #f0a85a;
 }
 
+<<<<<<< HEAD
 /* Ícone de pesquisa */
 .botao-pesquisa {
     background: none;
@@ -102,6 +155,9 @@ nav {
 }
 
 /* MENU HAMBÚRGUER */
+=======
+/* MENU HAMBÚRGUER (Regras para Responsividade) */
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -140,7 +196,11 @@ nav {
     .menu-toggle {
         display: flex;
     }
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     .menu.active,
     .extras.active {
         display: flex;
@@ -153,6 +213,7 @@ nav {
     }
 }
 
+<<<<<<< HEAD
 .banner {
     position: relative;
     width: 100%;
@@ -160,6 +221,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
+=======
+/* BANNER */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     color: #fff;
     overflow: hidden;
 }
@@ -238,11 +309,19 @@ nav {
     }
 }
 
+<<<<<<< HEAD
 .aba-evento{
     justify-content: center;
     text-align: center;
     color: #ff7b00;
     
+=======
+/* SEÇÕES DE CONTEÚDO */
+.aba-evento {
+    justify-content: center;
+    text-align: center;
+    color: #ff7b00;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 .text {
@@ -259,6 +338,7 @@ nav {
 
 .text3 {
     color: #575757
+<<<<<<< HEAD
     
 }
 .card1 {
@@ -274,18 +354,43 @@ nav {
 
 .card1:hover {
   transform: scale(1.03);
+=======
+}
+
+.card1 {
+    display: block;
+    width: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.card1:hover {
+    transform: scale(1.03);
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 /* Parte da imagem */
 .card-image img {
+<<<<<<< HEAD
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
+=======
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 /* Parte inferior (ícone + texto) */
 .card-content {
+<<<<<<< HEAD
   background-color: #f8f8f8;
   text-align: center;
   padding: 20px 15px;
@@ -300,10 +405,27 @@ nav {
   width: 100%;
   height: auto;
   display: block;
+=======
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.card-icon {
+    width: 50px;
+    margin: 0 auto 10px;
+}
+
+.card-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 /* Texto */
 .card-content h2 {
+<<<<<<< HEAD
   font-size: 16px;
   color: #333;
   margin: 0;
@@ -333,12 +455,47 @@ nav {
 }
 
 .history{
+=======
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card1 {
+    flex: 1 1 260px;
+    max-width: 260px;
+}
+
+.separador-faixa {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(224, 149, 78, 0.25);
+    margin: 50px auto;
+    border-radius: 1px;
+}
+
+.history {
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     justify-content: center;
     display: flex;
     padding: 20px;
 }
 
+<<<<<<< HEAD
 .email{
+=======
+.email {
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     justify-content: center;
     text-align: center;
     color: #575757;
@@ -348,6 +505,7 @@ nav {
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 8px;
+<<<<<<< HEAD
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 100%;
     max-width: 400px; /* Largura máxima para centralizar o conteúdo */
@@ -358,6 +516,17 @@ nav {
 
 .title {
     color: #ff8c00; 
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-left: 730px;
+}
+
+.title {
+    color: #ff8c00;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     font-size: 1.5em;
     margin-bottom: 5px;
 }
@@ -375,7 +544,11 @@ nav {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+<<<<<<< HEAD
     box-sizing: border-box; 
+=======
+    box-sizing: border-box;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     font-size: 1em;
 }
 
@@ -388,7 +561,11 @@ nav {
 
 .submit-btn {
     width: 100%;
+<<<<<<< HEAD
     background-color: #ff8c00; 
+=======
+    background-color: #ff8c00;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
     color: white;
     padding: 15px;
     border: none;
@@ -401,7 +578,11 @@ nav {
 }
 
 .submit-btn:hover {
+<<<<<<< HEAD
     background-color: #e67e00; 
+=======
+    background-color: #e67e00;
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)
 }
 
 .confirmation-text {
@@ -410,6 +591,7 @@ nav {
     margin-top: 15px;
 }
 
+<<<<<<< HEAD
 .footer {
   background-color: #4b4a4a; /* cinza escuro */
   color: #fff;
@@ -645,3 +827,270 @@ nav {
   transform: scale(1.05);
 }
 
+=======
+/* SEÇÃO INSCRIÇÃO */
+.inscricao {
+    background-image: url("/assets/Rectangle\ 14.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.inscricao p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-inscricao {
+    display: inline-block;
+    background-color: white;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao-inscricao:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+/* --- BOTÕES FLUTUANTES (CHAT E DOAÇÃO) --- */
+
+/* Botão flutuante de chat */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    line-height: 1; /* Centraliza o ícone */
+}
+
+/* Janela Pop-up do Chat (Hub de Contato) */
+.chat-popup {
+    position: fixed;
+    bottom: 80px; /* Acima do botão de chat */
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none; /* ESCONDIDO POR PADRÃO PELO JS */
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Corpo do Hub de Contato */
+.chat-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: #333;
+}
+.chat-body p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.3s;
+    font-size: 0.9em;
+}
+.chat-option i {
+    margin-right: 8px;
+}
+/* Estilos específicos para os botões do Hub */
+.whatsapp-btn {
+    background-color: #25D366;
+}
+.email-btn {
+    background-color: #d68741;
+}
+.chat-small-text {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+
+/* Botão flutuante de Doação (AGORA UM LINK <a>) */
+.donation-button {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #e60023; /* Cor forte de impacto */
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    z-index: 1000;
+    text-decoration: none; /* Remove sublinhado padrão do link */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+}
+
+.donation-button:hover {
+    background-color: #c3001c;
+}
+
+
+/* --- FOOTER --- */
+
+.footer {
+    background-color: #4b4a4a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.social-icons a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff7b00;
+}
+
+.footer-separator {
+    width: 90%;
+    margin: 25px auto;
+    border: 0.5px solid #ccc;
+    opacity: 0.4;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links span {
+    opacity: 0.7;
+}
+>>>>>>> 6e0f064 (Alterações Casa Kolping V.1.2)

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntários</title>
+</head>
+<link rel="stylesheet" href="./voluntario.css">
+
+<body>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../assets/LogoKolping.png" alt="Logo">
+                </div>
+                <ul class="menu">
+                    <li><a href="../home.html">Início</a></li>
+                    <li>
+                        <a href="#">Quem Somos</a>
+                        <ul class="submenu">
+                            <li><a href="#">História</a></li>
+                            <li><a href="#">Missão e Valores</a></li>
+                            <li><a href="#">Equipe</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Seja Membro</a>
+                        <ul class="submenu">
+                            <li><a href="./voluntario.html">Voluntário</a></li>
+                            <li><a href="#">Parceiro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Beneficiários</a></li>
+                </ul>
+                <div class="extras">
+                    <button type="button" class="botao-doar">Doe Agora!</button>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="banner">
+            <div class="banner-txt">
+                <h1>Seja Voluntário</h1>
+            </div>
+        </section>
+
+        <section class="formulario-voluntario">
+            <div class="container">
+                <h2>Junte-se a Nós! Preencha o Formulário de Inscrição</h2>
+
+                <form action="/submit-volunteer-form" method="POST">
+
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+
+                        <div class="form-grupo">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="telefone">Telefone (WhatsApp):</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="data-nascimento">Data de Nascimento:</label>
+                            <input type="date" id="data-nascimento" name="data_nascimento" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="cep">CEP:</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="endereco">Endereço (Rua, Número, Bairro):</label>
+                            <input type="text" id="endereco" name="endereco" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="municipio">Município (Cidade/Estado):</label>
+                            <input type="text" id="municipio" name="municipio" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="tipo_deficiencia">Possui alguma deficiência?</label>
+                            <select id="tipo_deficiencia" name="tipo_deficiencia" required>
+                                <option value="nenhuma" selected>Não Possuo</option>
+                                <option value="fisica">Deficiência Física</option>
+                                <option value="auditiva">Deficiência Auditiva</option>
+                                <option value="visual">Deficiência Visual</option>
+                                <option value="mental">Deficiência Mental/Intelectual</option>
+                                <option value="multipla">Deficiência Múltipla</option>
+                                <option value="outro">Outra (Especifique abaixo)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-grupo" id="especificacao_deficiencia_container" style="display: none;">
+                            <label for="especificacao_deficiencia">Especifique sua Deficiência:</label>
+                            <input type="text" id="especificacao_deficiencia" name="especificacao_deficiencia"
+                                placeholder="Ex: Paraplegia, Surdez, Espectro Autista, etc.">
+                        </div>
+                        </fieldset>
+
+                    <fieldset>
+                        <legend>Interesse e Disponibilidade</legend>
+
+                        <div class="form-grupo">
+                            <label for="area-interesse">Área de Interesse (Ex: Educação, Limpeza de Áreas Verdes,
+                                Suporte Administrativo):</label>
+                            <select id="area-interesse" name="area_interesse" required>
+                                <option value="">Selecione uma Área</option>
+                                <option value="educacao">Educação e Aulas</option>
+                                <option value="meio-ambiente">Meio Ambiente e Limpeza</option>
+                                <option value="administrativo">Suporte Administrativo</option>
+                                <option>Organização de Eventos</option>
+                                <option value="outro">Outro (Especifique abaixo)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="disponibilidade">Qual a sua disponibilidade (Ex: Finais de semana, 2h por semana,
+                                etc.)?</label>
+                            <textarea id="disponibilidade" name="disponibilidade" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="motivacao">Por que você deseja ser voluntário(a)?</label>
+                            <textarea id="motivacao" name="motivacao" rows="5" required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-grupo checkbox">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Declaro que as informações são verdadeiras e aceito ser contatado para a
+                            seleção.</label>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">Enviar Inscrição</button>
+
+                </form>
+            </div>
+        </section>
+
+        <div class="separador-faixa"></div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-col">
+                        <h4>Endereço</h4>
+                        <p>Rua: Casa Kolping, 7888</p>
+                        <p>04999-78, São Paulo – SP</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Horário de atendimento</h4>
+                        <p>Segunda a Sexta-feira</p>
+                        <p>Das 08:30 às 18:30</p>
+                    </div>
+                </div>
+
+                <div class="footer-buttons">
+                    <button class="footer-btn">
+                        <i class="fa-solid fa-envelope"></i> FALE CONOSCO
+                    </button>
+                    <button class="footer-btn">
+                        <i class="fa-solid fa-headphones"></i> OUVIDORIA
+                    </button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <hr class="footer-separator">
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <span>|</span>
+                    <a href="./termos_uso_e_aceite/termos.html">Termos de Uso</a>
+                </div>
+                <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
+            </div>
+        </footer>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const selectDeficiencia = document.getElementById('tipo_deficiencia');
+                const containerTexto = document.getElementById('especificacao_deficiencia_container');
+                const inputTexto = document.getElementById('especificacao_deficiencia');
+
+                function toggleEspecificacao() {
+                    
+                    const value = selectDeficiencia.value;
+                    const showInput = value !== 'nenhuma' && value !== ''; 
+
+                    if (showInput) {
+                        containerTexto.style.display = 'block';
+                        inputTexto.required = true;
+                    } else {
+                        containerTexto.style.display = 'none';
+                        inputTexto.required = false;
+                        inputTexto.value = ''; 
+                    }
+                }
+
+                selectDeficiencia.addEventListener('change', toggleEspecificacao);
+
+                
+                toggleEspecificacao();
+            });
+        </script>
+        </body>
+
+</html>

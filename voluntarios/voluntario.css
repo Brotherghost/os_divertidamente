@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d68741;
+    padding: 10px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* MENU PRINCIPAL */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+/* SUBMENU */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #e0954e;
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+.submenu li {
+    padding: 8px 20px;
+}
+
+.submenu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.menu li:hover>.submenu {
+    display: block;
+}
+
+/* BOTÕES EXTRAS */
+.extras {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão "Doe Agora" */
+.botao-doar {
+    background-color: #e0954e;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-doar:hover {
+    background-color: #f0a85a;
+}
+
+/* MENU HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    background: #000;
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    /* Esconde menu e extras por padrão */
+    .menu,
+    .extras {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #d68741;
+        margin-top: 10px;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active,
+    .extras.active {
+        display: flex;
+    }
+
+    .submenu {
+        position: static;
+        margin-top: 5px;
+        background-color: #e0954e;
+    }
+}
+
+/* BANNER - Estilo Corrigido */
+.banner {
+    background-image: url('../assets/volunteer_aba.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Adicionando um overlay semi-transparente para o texto ter mais destaque (opcional, mas recomendado) */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay preto com 40% de opacidade */
+    z-index: 1;
+    /* Garante que o overlay fique abaixo do texto */
+}
+
+/* Garante que o texto do banner fique acima do overlay */
+.banner-txt {
+    position: relative;
+    z-index: 2;
+    /* Fica acima do overlay */
+    color: #d68741;
+    font-size: 5em;
+    /* Aumenta o tamanho do texto (como você já tinha) */
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.banner-txt h1 {
+    font-size: em;
+    margin: 0;
+}
+
+.separador-faixa {
+    width: 55%;
+    height: 1px;
+    background-color: rgba(224, 149, 78, 0.25);
+    margin: 50px auto;
+    border-radius: 1px;
+}
+
+
+/* --- ESTILOS DO FORMULÁRIO DE VOLUNTÁRIO --- */
+
+.formulario-voluntario {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    /* Fundo suave para destacar o formulário */
+}
+
+.formulario-voluntario .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-voluntario h2 {
+    text-align: center;
+    color: #d68741;
+    /* Laranja da sua header */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Estilo para fieldset (agrupamento de campos) */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+    color: #e0954e;
+    /* Laranja mais claro */
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+/* Estilo para cada grupo de formulário (label + input) */
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="tel"],
+.form-grupo input[type="date"],
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem a largura */
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: #d68741;
+    /* Foco com a cor primária */
+    outline: none;
+    box-shadow: 0 0 5px rgba(214, 135, 65, 0.3);
+}
+
+/* Estilo específico para Checkbox GERAL */
+.form-grupo.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-grupo.checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-grupo.checkbox label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Estilo para o botão de envio */
+.botao-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #d68741;
+    /* Cor primária */
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.botao-enviar:hover {
+    background-color: #e0954e;
+    /* Cor secundária ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.footer {
+    background-color: #4b4a4a;
+    /* cinza escuro */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.social-icons a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff7b00;
+}
+
+.footer-separator {
+    width: 90%;
+    margin: 25px auto;
+    border: 0.5px solid #ccc;
+    opacity: 0.4;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links span {
+    opacity: 0.7;
+}
+
+/* SUBMENU */
+nav ul.menu li {
+  position: relative; /* necessário pra alinhar o submenu em relação ao item pai */
+}
+
+nav ul.menu li ul.submenu {
+  display: none;
+  position: absolute;
+  background-color: #d68741;
+  top: 100%; /* aparece logo abaixo do item principal */
+  left: 50%; /* começa no meio do item pai */
+  transform: translateX(-50%); /* centraliza o submenu */
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 1100;
+  min-width: 180px;
+  text-align: center; /* centraliza os textos */
+}
+
+nav ul.menu li:hover > ul.submenu,
+nav ul.menu li ul.submenu:hover {
+  display: block;
+}
+
+nav ul.menu li ul.submenu li {
+  padding: 8px 20px;
+}
+
+nav ul.menu li ul.submenu li a {
+  color: white;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul.menu li ul.submenu li a:hover {
+  background-color: #e0954e;
+}
