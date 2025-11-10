@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/LogoKolping.png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li>
+                    <a href="#">Quem Somos</a>
+                    <ul class="submenu">
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Missão e Valores</a></li>
+                        <li><a href="#">Equipe</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Seja Membro</a>
+                    <ul class="submenu">
+                        <li><a href="../voluntarios/voluntario.html">Voluntário</a></li>
+                        <li><a href="#">Parceiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+                <li><a href="#">Beneficiários</a></li>
+            </ul>
+            <div class="extras">
+                <button type="button" class="botao-doar" id="headerDoar">Doe Agora!</button>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <div class="beneficiario-container">
+
+        <h2>Beneficiários</h2>
+
+        <div class="beneficiario-grid">
+
+            <div class="info-section">
+                <h3>Como solicitar doações:</h3>
+                <p>
+                    Se você precisa de ajuda, é fácil solicitar uma doação!<br><br>
+                    Basta preencher nosso formulário com seus dados e explicar qual é a sua necessidade.
+                    Nossa equipe vai analisar o pedido e entrar em contato o mais rápido possível.
+                </p>
+                <p>
+                    Para receber as doações, é necessário ter pelo menos <strong>18 anos</strong>.
+                </p>
+
+                <h3>Como retirar doações:</h3>
+                <p>
+                    Após a confirmação do seu pedido, nossa equipe entrará em contato para agendar o dia e o horário
+                    disponíveis
+                    para envio ou retirada da doação.
+                </p>
+            </div>
+
+            <div class="form-section">
+                <h3>Cadastro de Beneficiário</h3>
+                <form class="form-beneficiario">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="tel" placeholder="Telefone" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="text" placeholder="Endereço" required>
+                    <div class="input-row">
+                        <input type="text" placeholder="Município" required>
+                        <input type="text" placeholder="UF" class="small">
+                        <input type="text" placeholder="CEP" class="small">
+                    </div>
+                    <label>Data de Nascimento:</label>
+                    <input type="date" required>
+
+                    <label>Você é pessoa com:</label>
+                    <select>
+                        <option>Deficiência visual</option>
+                        <option>Deficiência auditiva</option>
+                        <option>Deficiência motora</option>
+                        <option>Outra condição</option>
+                        <option>Nenhuma</option>
+                    </select>
+
+                    <label>Tenho interesse em:</label>
+                    <select>
+                        <option>Roupas</option>
+                        <option>Alimentos</option>
+                        <option>Produtos de higiene</option>
+                        <option>Outros</option>
+                    </select>
+
+                    <label>Desejo receber informações por:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Telefone</label>
+                        <label><input type="checkbox"> E-mail</label>
+                        <label><input type="checkbox"> WhatsApp</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Cadastro</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="suporte-section">
+            <h3>Suporte</h3>
+            <div class="suporte-buttons">
+                <button><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"> WhatsApp</button>
+                <button><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png"> Telefone</button>
+                <button><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"> Chat</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>Endereço</h4>
+                    <p>Rua: Casa Kolping, 7888</p>
+                    <p>04999-78, São Paulo – SP</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Horário de atendimento</h4>
+                    <p>Segunda a Sexta-feira</p>
+                    <p>Das 08:30 às 18:30</p>
+                </div>
+            </div>
+
+            <div class="footer-buttons">
+                <button class="footer-btn">
+                    <i class="fa-solid fa-envelope"></i> FALE CONOSCO
+                </button>
+                <button class="footer-btn">
+                    <i class="fa-solid fa-headphones"></i> OUVIDORIA
+                </button>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <span>|</span>
+                <a href="../termos_uso_e_aceite/termos.html">Termos de Uso</a>
+            </div>
+            <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

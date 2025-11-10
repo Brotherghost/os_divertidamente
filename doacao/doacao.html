@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça sua Doação</title>
     <link rel="stylesheet" href="./donation.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -38,12 +40,153 @@
         </nav>
     </header>
 
-    <section class="banner">
-        <img src="./assets/banner.png" alt="Imagem do banner" class="banner-img">
-        <div class="banner-conteudo"></div>
-    </section>
 
 
-    
+
+
+
+
+
+
+    <div class="doacao-container">
+
+        <div class="banner-doacao">
+            <h2>Já se cadastrou? Faça uma doação!</h2>
+            <p>Sua doação faz toda a diferença </p>
+        </div>
+
+        <div class="form-card">
+            <h3>Registrar Doação</h3>
+
+            <div class="input-group">
+                <label>Tipo de Doação:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo" /> Dinheiro</label>
+                    <label><input type="radio" name="tipo" /> Alimentos</label>
+                    <label><input type="radio" name="tipo" /> Roupas</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Método de Pagamento:</label>
+                <div class="metodos">
+                    <button class="metodo"><img src="https://cdn-icons-png.flaticon.com/512/6011/6011895.png" />
+                        Pix</button>
+                    <button class="metodo"><img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" />
+                        Cartão</button>
+                    <button class="metodo"><img src="https://cdn-icons-png.flaticon.com/512/3756/3756758.png" />
+                        Boleto</button>
+                    <button class="metodo"><img src="https://cdn-icons-png.flaticon.com/512/2721/2721290.png" />
+                        Transferência</button>
+                    <button class="metodo"><img src="https://cdn-icons-png.flaticon.com/512/196/196565.png" />
+                        PayPal</button>
+                </div>
+            </div>
+
+            <button class="btn-registrar">Registrar Doação</button>
+        </div>
+
+        <div class="registro-section">
+            <h3>Registro de Doações</h3>
+            <table class="tabela-doacoes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                        <th>Método</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ozzy Osbourne</td>
+                        <td>Dinheiro</td>
+                        <td>R$ 10,00</td>
+                        <td>Boleto</td>
+                        <td>11/10/2025</td>
+                    </tr>
+                    <tr>
+                        <td>Ozzy Osbourne</td>
+                        <td>Dinheiro</td>
+                        <td>R$ 50,00</td>
+                        <td>PayPal</td>
+                        <td>13/10/2025</td>
+                    </tr>
+                    <tr>
+                        <td>Ozzy Osbourne</td>
+                        <td>Roupas</td>
+                        <td>R$ 230,00</td>
+                        <td>Transferência</td>
+                        <td>18/10/2025</td>
+                    </tr>
+                    <tr>
+                        <td>Ozzy Osbourne</td>
+                        <td>Alimentos</td>
+                        <td>R$ 160,00</td>
+                        <td>Pix</td>
+                        <td>18/10/2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-col">
+                    <h4>Endereço</h4>
+                    <p>Rua: Casa Kolping, 7888</p>
+                    <p>04999-78, São Paulo – SP</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Horário de atendimento</h4>
+                    <p>Segunda a Sexta-feira</p>
+                    <p>Das 08:30 às 18:30</p>
+                </div>
+            </div>
+
+            <div class="footer-buttons">
+                <button class="footer-btn">
+                    <i class="fa-solid fa-envelope"></i> FALE CONOSCO
+                </button>
+                <button class="footer-btn">
+                    <i class="fa-solid fa-headphones"></i> OUVIDORIA
+                </button>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <hr class="footer-separator">
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <span>|</span>
+                <a href="./termos_uso_e_aceite/termos.html">Termos de Uso</a>
+            </div>
+            <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
+        </div>
+    </footer>
+
+
+
 </body>
+
 </html>
