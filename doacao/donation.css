@@ -172,6 +172,7 @@ nav ul.menu li ul.submenu li a:hover {
 
 
 
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdf2e9;
@@ -221,8 +222,37 @@ body {
   margin-bottom: 20px;
 }
 
+
+
+
+
+
 .input-group {
   margin-bottom: 20px;
+
+  text-align: center;
+
+  align-items: center;
+/*
+display: flex;
+  flex-direction: column;
+  gap: 12px;
+*/
+}
+.input-group input{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #d7894a;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: auto;
 }
 
 .radio-group {
@@ -310,6 +340,9 @@ body {
   padding: 10px;
   border-bottom: 1px solid #c97a47;
 }
+
+
+
 
 
 
