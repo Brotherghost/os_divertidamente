@@ -270,6 +270,28 @@ display: flex;
   margin-top: 10px;
 }
 
+.boleto {
+  background-color: #f5c49a;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.boleto:hover {
+  background-color: #f1b27b;
+  transform: translateY(-2px);
+}
+
+.boleto img{
+  width: 45px;
+  height: 25px;
+
+}
 .metodo {
   background-color: #f5c49a;
   border: none;

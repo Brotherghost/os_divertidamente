@@ -49,7 +49,7 @@
 
     <div class="search-filter-container">
       <div class="search-container">
-        <input type="text" placeholder="Pesquisar..." class="search-input" />
+        <input type="text" placeholder="Pesquisar na tabela..." class="search-input" />
         <button class="search-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
             <circle cx="11" cy="11" r="8"></circle>
@@ -59,7 +59,8 @@
       </div>
     
       <select class="filter-select">
-        <option value="">Filtrar por...</option>
+        <option value="" disabled selected hidden>Filtrar por...</option>
+        <option value="id">id</option>
         <option value="funcionario">Funcionário</option>
         <option value="voluntario">Voluntário</option>
         <option value="doacao">Doação</option>
@@ -71,71 +72,47 @@
 
 
 
-
-    <div class="tabela-container">
+<div class="tabela-container">
   <div class="tabela-box">
     <h2>Funcionário</h2>
     <table class="tabela">
       <thead>
         <tr>
-          <th>nome</th>
-          <th>|</th>
-          <th>email</th>
-          <th>|</th>
-          <th>telefone</th>
-          <th>|</th>
-          <th>nascimento</th>
-          <th>|</th>
-          <th>deficiência</th>
-          <th>|</th>
-          <th>função</th>
-          <th>|</th>
-          <th>preferencia info</th>
-          <th>|</th>
-          <th>comunicação</th>
-          <th>|</th>
+          <th>nome</th><th>|</th>
+          <th>email</th><th>|</th>
+          <th>telefone</th><th>|</th>
+          <th>nascimento</th><th>|</th>
+          <th>deficiência</th><th>|</th>
+          <th>função</th><th>|</th>
+          <th>preferencia info</th><th>|</th>
+          <th>comunicação</th><th>|</th>
           <th>data cadastro</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>Gerente</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Ana Rodrigues</td><td>|</td>
+          <td>ana.rodrigues@ong.com</td><td>|</td>
+          <td>+55 11 98822-3344</td><td>|</td>
+          <td>12/03/1990</td><td>|</td>
+          <td>nenhuma</td><td>|</td>
+          <td>Coordenadora</td><td>|</td>
+          <td>email</td><td>|</td>
+          <td>fala</td><td>|</td>
+          <td>10/01/2024</td>
           <td class="icon-cell">+</td>
         </tr>
+
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>Gerente</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Paulo Mendes</td><td>|</td>
+          <td>paulo.mendes@ong.com</td><td>|</td>
+          <td>+55 11 97733-8877</td><td>|</td>
+          <td>22/11/1985</td><td>|</td>
+          <td>visual leve</td><td>|</td>
+          <td>Administrador</td><td>|</td>
+          <td>telefone</td><td>|</td>
+          <td>escrita</td><td>|</td>
+          <td>18/05/2024</td>
           <td class="icon-cell">+</td>
         </tr>
       </tbody>
@@ -147,64 +124,41 @@
     <table class="tabela">
       <thead>
         <tr>
-          <th>nome</th>
-          <th>|</th>
-          <th>email</th>
-          <th>|</th>
-          <th>telefone</th>
-          <th>|</th>
-          <th>nascimento</th>
-          <th>|</th>
-          <th>deficiência</th>
-          <th>|</th>
-          <th>função</th>
-          <th>|</th>
-          <th>preferencia info</th>
-          <th>|</th>
-          <th>comunicação</th>
-          <th>|</th>
+          <th>nome</th><th>|</th>
+          <th>email</th><th>|</th>
+          <th>telefone</th><th>|</th>
+          <th>nascimento</th><th>|</th>
+          <th>deficiência</th><th>|</th>
+          <th>função</th><th>|</th>
+          <th>preferencia info</th><th>|</th>
+          <th>comunicação</th><th>|</th>
           <th>data cadastro</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>Gerente</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Julia Santos</td><td>|</td>
+          <td>julia.santos@gmail.com</td><td>|</td>
+          <td>+55 11 92122-5522</td><td>|</td>
+          <td>05/07/1996</td><td>|</td>
+          <td>nenhuma</td><td>|</td>
+          <td>Assistente</td><td>|</td>
+          <td>whatsapp</td><td>|</td>
+          <td>fala</td><td>|</td>
+          <td>02/06/2024</td>
           <td class="icon-cell">+</td>
         </tr>
+
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>Gerente</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Thiago Luz</td><td>|</td>
+          <td>thiago.luz@gmail.com</td><td>|</td>
+          <td>+55 11 93444-2288</td><td>|</td>
+          <td>14/02/1999</td><td>|</td>
+          <td>auditiva leve</td><td>|</td>
+          <td>Apoio Geral</td><td>|</td>
+          <td>email</td><td>|</td>
+          <td>escrita</td><td>|</td>
+          <td>28/06/2024</td>
           <td class="icon-cell">+</td>
         </tr>
       </tbody>
@@ -216,191 +170,134 @@
 
 <div class="tabela-container">
 
-  <!-- TABELA DOAÇÃO -->
+  <!-- DOAÇÃO -->
   <div class="tabela-box">
     <h2>Doação</h2>
     <table class="tabela">
       <thead>
         <tr>
-          <th>Id Doação</th>
-          <th>|</th>
-          <th>Id Beneficiário</th>
-          <th>|</th>
-          <th>Id Doador</th>
-          <th>|</th>
-          <th>Data</th>
-          <th>|</th>
+          <th>Id Doação</th><th>|</th>
+          <th>Id Beneficiário</th><th>|</th>
+          <th>Id Doador</th><th>|</th>
+          <th>Data</th><th>|</th>
           <th>Doação</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>725742560</td>
-          <td>|</td>
-          <td>826845026</td>
-          <td>|</td>
-          <td>163980765</td>
-          <td>|</td>
-          <td>30/10/2025</td>
-          <td>|</td>
-          <td>descrição da doação</td>
+          <td>548720125</td><td>|</td>
+          <td>998134522</td><td>|</td>
+          <td>452187990</td><td>|</td>
+          <td>11/04/2025</td><td>|</td>
+          <td>Alimentos não perecíveis</td>
         </tr>
+
         <tr>
-          <td>725742560</td>
-          <td>|</td>
-          <td>826845026</td>
-          <td>|</td>
-          <td>163980765</td>
-          <td>|</td>
-          <td>30/10/2025</td>
-          <td>|</td>
-          <td>descrição da doação</td>
+          <td>874512663</td><td>|</td>
+          <td>745218003</td><td>|</td>
+          <td>661209887</td><td>|</td>
+          <td>23/08/2025</td><td>|</td>
+          <td>Roupas e calçados</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- TABELA DOADOR -->
+  <!-- DOADOR -->
   <div class="tabela-box">
     <h2>doador</h2>
     <table class="tabela">
       <thead>
         <tr>
-          <th>nome</th>
-          <th>|</th>
-          <th>email</th>
-          <th>|</th>
-          <th>telefone</th>
-          <th>|</th>
-          <th>nascimento</th>
-          <th>|</th>
-          <th>deficiência</th>
-          <th>|</th>
-          <th>interece</th>
-          <th>|</th>
-          <th>preferencia info</th>
-          <th>|</th>
-          <th>comunicação</th>
-          <th>|</th>
+          <th>nome</th><th>|</th>
+          <th>email</th><th>|</th>
+          <th>telefone</th><th>|</th>
+          <th>nascimento</th><th>|</th>
+          <th>deficiência</th><th>|</th>
+          <th>interece</th><th>|</th>
+          <th>preferencia info</th><th>|</th>
+          <th>comunicação</th><th>|</th>
           <th>data cadastro</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>boa fé</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Marcos Silva</td><td>|</td>
+          <td>marcos.silva@gmail.com</td><td>|</td>
+          <td>+55 11 91244-9088</td><td>|</td>
+          <td>18/09/1984</td><td>|</td>
+          <td>nenhuma</td><td>|</td>
+          <td>educação</td><td>|</td>
+          <td>email</td><td>|</td>
+          <td>fala</td><td>|</td>
+          <td>25/04/2024</td>
           <td class="icon-cell">+</td>
         </tr>
+
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>boa fé</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Helena Prado</td><td>|</td>
+          <td>helena.prado@gmail.com</td><td>|</td>
+          <td>+55 11 98211-2200</td><td>|</td>
+          <td>09/01/1992</td><td>|</td>
+          <td>visual leve</td><td>|</td>
+          <td>saúde</td><td>|</td>
+          <td>whatsapp</td><td>|</td>
+          <td>escrita</td><td>|</td>
+          <td>14/02/2024</td>
           <td class="icon-cell">+</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- TABELA BENEFICIÁRIO -->
+  <!-- BENEFICIÁRIO -->
   <div class="tabela-box">
     <h2>beneficiário</h2>
     <table class="tabela">
       <thead>
         <tr>
-          <th>nome</th>
-          <th>|</th>
-          <th>email</th>
-          <th>|</th>
-          <th>telefone</th>
-          <th>|</th>
-          <th>nascimento</th>
-          <th>|</th>
-          <th>deficiência</th>
-          <th>|</th>
-          <th>interece</th>
-          <th>|</th>
-          <th>preferencia info</th>
-          <th>|</th>
-          <th>comunicação</th>
-          <th>|</th>
+          <th>nome</th><th>|</th>
+          <th>email</th><th>|</th>
+          <th>telefone</th><th>|</th>
+          <th>nascimento</th><th>|</th>
+          <th>deficiência</th><th>|</th>
+          <th>interece</th><th>|</th>
+          <th>preferencia info</th><th>|</th>
+          <th>comunicação</th><th>|</th>
           <th>data cadastro</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>fome</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Carla Gomes</td><td>|</td>
+          <td>carla.gomes@gmail.com</td><td>|</td>
+          <td>+55 11 95533-1188</td><td>|</td>
+          <td>29/04/1987</td><td>|</td>
+          <td>motora leve</td><td>|</td>
+          <td>alimentação</td><td>|</td>
+          <td>email</td><td>|</td>
+          <td>fala</td><td>|</td>
+          <td>03/07/2024</td>
           <td class="icon-cell">+</td>
         </tr>
+
         <tr>
-          <td>Fabricio Paes Villa</td>
-          <td>|</td>
-          <td>fabriciopaesv@gmail.com</td>
-          <td>|</td>
-          <td>+55 11 941080741</td>
-          <td>|</td>
-          <td>08/08/2004</td>
-          <td>|</td>
-          <td>null</td>
-          <td>|</td>
-          <td>fome</td>
-          <td>|</td>
-          <td>email</td>
-          <td>|</td>
-          <td>escrita</td>
-          <td>|</td>
-          <td>15/06/2024</td>
+          <td>Ricardo Moreira</td><td>|</td>
+          <td>ricardo.moreira@gmail.com</td><td>|</td>
+          <td>+55 11 97866-4400</td><td>|</td>
+          <td>10/10/1983</td><td>|</td>
+          <td>nenhuma</td><td>|</td>
+          <td>moradia</td><td>|</td>
+          <td>whatsapp</td><td>|</td>
+          <td>escrita</td><td>|</td>
+          <td>12/08/2024</td>
           <td class="icon-cell">+</td>
         </tr>
       </tbody>
     </table>
   </div>
-</div>
 
+</div>
 
 
 
