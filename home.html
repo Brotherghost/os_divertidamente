@@ -36,15 +36,17 @@
                 <li><a href="./beneficiario/beneficiario.html">Beneficiários</a></li>
             </ul>
             <div class="extras">
-                <button type="button" class="botao-doar" id="headerDoar">Admin!</button>
+                <a href="./adm/adm.html" id="headerDoar" class="icon-admin" title="Área Administrativa">
+                    <i class="fa-solid fa-user-shield"></i>
+                </a>
             </div>
-        </nav>
+
     </header>
 
-   <section class="banner">
+    <section class="banner">
         <img src="./assets/banner.png" alt="Imagem do banner" class="banner-img">
         <div class="banner-conteudo"></div>
-    </section> 
+    </section>
 
     <div class="separador-faixa"></div>
 
@@ -168,10 +170,12 @@
         </div>
         <div class="chat-body">
             <p>Olá! Escolha como prefere ser atendido:</p>
-            <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Casa%20Kolping." target="_blank" class="chat-option whatsapp-btn">
+            <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Casa%20Kolping."
+                target="_blank" class="chat-option whatsapp-btn">
                 <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
             </a>
-            <a href="mailto:SEUEMAIL@email.com?subject=Contato%20via%20Site%20-%20Casa%20Kolping" class="chat-option email-btn">
+            <a href="mailto:SEUEMAIL@email.com?subject=Contato%20via%20Site%20-%20Casa%20Kolping"
+                class="chat-option email-btn">
                 <i class="fas fa-envelope"></i> Enviar um E-mail
             </a>
         </div>
@@ -218,9 +222,9 @@
 
         <div class="footer-bottom">
             <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
+                <a href="./termos_uso_e_aceite/termos.html">Política de Privacidade</a>
                 <span>|</span>
-                <a href="./termos_uso_e_aceite/termos.html">Termos de Uso</a>
+                <a href="./termos_uso_e_aceite/termos_uso.html">Termos de Uso</a>
             </div>
             <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
         </div>
@@ -228,9 +232,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Lógica do Chat Pop-up
             const chatButton = document.getElementById('chatButton');
             const chatPopup = document.getElementById('chatPopup');
@@ -248,9 +252,9 @@
             // Lógica do Botão de Doação no Cabeçalho
             const headerDoarButton = document.getElementById('headerDoar');
             if (headerDoarButton) {
-                headerDoarButton.addEventListener('click', function() {
+                headerDoarButton.addEventListener('click', function () {
                     // Redireciona o botão do cabeçalho para a página de doação
-                    window.location.href = './doacao.html'; 
+                    window.location.href = './doacao.html';
                 });
             }
         });

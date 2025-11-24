@@ -2,67 +2,72 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área Administrativa - Casa Kolping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="../assets/LogoKolping.png" alt="Logo">
-                <span class="titulo">Casa Kolping</span>
-                
-            </div>
-            <ul class="menu">
-                <li><a href="../home.html">Início</a></li>
-                <li>
-                    <a href="#">Quem Somos</a>
-                    <ul class="submenu">
-                        <li><a href="#">História</a></li>
-                        <li><a href="#">Missão e Valores</a></li>
-                        <li><a href="#">Equipe</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Seja Membro</a>
-                    <ul class="submenu">
-                        <li><a href="#">Voluntário</a></li>
-                        <li><a href="#">Parceiro</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Trabalhe Conosco</a></li>
-                <li><a href="#">Beneficiários</a></li>
-            </ul>
-            <div class="extras">
-                <button type="button" class="botao-doar">Doe Agora!</button>
-                <button type="button" class="botao-pesquisa" title="Pesquisar">🔍</button>
-            </div>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../assets/LogoKolping.png" alt="Logo">
+        <span class="titulo">Casa Kolping</span>
+      </div>
 
+      <ul class="menu">
+        <li><a href="../home.html">Início</a></li>
+        <li>
+          <a href="#">Quem Somos</a>
+          <ul class="submenu">
+            <li><a href="#">História</a></li>
+            <li><a href="#">Missão e Valores</a></li>
+            <li><a href="#">Equipe</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Seja Membro</a>
+          <ul class="submenu">
+            <li><a href="#">Voluntário</a></li>
+            <li><a href="#">Parceiro</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Trabalhe Conosco</a></li>
+        <li><a href="#">Beneficiários</a></li>
+      </ul>
 
+      <div class="extras">
+        <a href="./admin.html" id="headerDoar" class="icon-admin" title="Área Administrativa">
+          <i class="fa-solid fa-user-shield"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
 
+  <!-- CONTEÚDO ADMIN COM FUNDO BRANCO -->
+  <main class="admin-container">
 
-
+    <h1 class="admin-title">Área Administrativa</h1>
 
     <div class="search-filter-container">
       <div class="search-container">
         <input type="text" placeholder="Pesquisar na tabela..." class="search-input" />
         <button class="search-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="black" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="icon">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
       </div>
-    
-      <select class="filter-select">
-        <option value="" disabled selected hidden>Filtrar por...</option>
-        <option value="id">id</option>
+
+      <select class="filter-select" id="filterSelect">
+        <option value="">Mostrar todos</option>
         <option value="funcionario">Funcionário</option>
         <option value="voluntario">Voluntário</option>
         <option value="doacao">Doação</option>
@@ -71,303 +76,411 @@
       </select>
     </div>
 
+    <div class="tabela-container">
+      <div class="tabela-box" data-tipo="funcionario">
+        <h2>Funcionário</h2>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>nome</th>
+              <th>|</th>
+              <th>email</th>
+              <th>|</th>
+              <th>telefone</th>
+              <th>|</th>
+              <th>nascimento</th>
+              <th>|</th>
+              <th>deficiência</th>
+              <th>|</th>
+              <th>função</th>
+              <th>|</th>
+              <th>preferencia info</th>
+              <th>|</th>
+              <th>comunicação</th>
+              <th>|</th>
+              <th>data cadastro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana Rodrigues</td>
+              <td>|</td>
+              <td>ana.rodrigues@ong.com</td>
+              <td>|</td>
+              <td>+55 11 98822-3344</td>
+              <td>|</td>
+              <td>12/03/1990</td>
+              <td>|</td>
+              <td>nenhuma</td>
+              <td>|</td>
+              <td>Coordenadora</td>
+              <td>|</td>
+              <td>email</td>
+              <td>|</td>
+              <td>fala</td>
+              <td>|</td>
+              <td>10/01/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
 
+            <tr>
+              <td>Paulo Mendes</td>
+              <td>|</td>
+              <td>paulo.mendes@ong.com</td>
+              <td>|</td>
+              <td>+55 11 97733-8877</td>
+              <td>|</td>
+              <td>22/11/1985</td>
+              <td>|</td>
+              <td>visual leve</td>
+              <td>|</td>
+              <td>Administrador</td>
+              <td>|</td>
+              <td>telefone</td>
+              <td>|</td>
+              <td>escrita</td>
+              <td>|</td>
+              <td>18/05/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="tabela-box" data-tipo="voluntario">
+        <h2>Voluntário</h2>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>nome</th>
+              <th>|</th>
+              <th>email</th>
+              <th>|</th>
+              <th>telefone</th>
+              <th>|</th>
+              <th>nascimento</th>
+              <th>|</th>
+              <th>deficiência</th>
+              <th>|</th>
+              <th>função</th>
+              <th>|</th>
+              <th>preferencia info</th>
+              <th>|</th>
+              <th>comunicação</th>
+              <th>|</th>
+              <th>data cadastro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Julia Santos</td>
+              <td>|</td>
+              <td>julia.santos@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 92122-5522</td>
+              <td>|</td>
+              <td>05/07/1996</td>
+              <td>|</td>
+              <td>nenhuma</td>
+              <td>|</td>
+              <td>Assistente</td>
+              <td>|</td>
+              <td>whatsapp</td>
+              <td>|</td>
+              <td>fala</td>
+              <td>|</td>
+              <td>02/06/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
 
-<div class="tabela-container">
-  <div class="tabela-box">
-    <h2>Funcionário</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>nome</th><th>|</th>
-          <th>email</th><th>|</th>
-          <th>telefone</th><th>|</th>
-          <th>nascimento</th><th>|</th>
-          <th>deficiência</th><th>|</th>
-          <th>função</th><th>|</th>
-          <th>preferencia info</th><th>|</th>
-          <th>comunicação</th><th>|</th>
-          <th>data cadastro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Ana Rodrigues</td><td>|</td>
-          <td>ana.rodrigues@ong.com</td><td>|</td>
-          <td>+55 11 98822-3344</td><td>|</td>
-          <td>12/03/1990</td><td>|</td>
-          <td>nenhuma</td><td>|</td>
-          <td>Coordenadora</td><td>|</td>
-          <td>email</td><td>|</td>
-          <td>fala</td><td>|</td>
-          <td>10/01/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
+            <tr>
+              <td>Thiago Luz</td>
+              <td>|</td>
+              <td>thiago.luz@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 93444-2288</td>
+              <td>|</td>
+              <td>14/02/1999</td>
+              <td>|</td>
+              <td>auditiva leve</td>
+              <td>|</td>
+              <td>Apoio Geral</td>
+              <td>|</td>
+              <td>email</td>
+              <td>|</td>
+              <td>escrita</td>
+              <td>|</td>
+              <td>28/06/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-        <tr>
-          <td>Paulo Mendes</td><td>|</td>
-          <td>paulo.mendes@ong.com</td><td>|</td>
-          <td>+55 11 97733-8877</td><td>|</td>
-          <td>22/11/1985</td><td>|</td>
-          <td>visual leve</td><td>|</td>
-          <td>Administrador</td><td>|</td>
-          <td>telefone</td><td>|</td>
-          <td>escrita</td><td>|</td>
-          <td>18/05/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="tabela-container">
 
-  <div class="tabela-box">
-    <h2>Voluntário</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>nome</th><th>|</th>
-          <th>email</th><th>|</th>
-          <th>telefone</th><th>|</th>
-          <th>nascimento</th><th>|</th>
-          <th>deficiência</th><th>|</th>
-          <th>função</th><th>|</th>
-          <th>preferencia info</th><th>|</th>
-          <th>comunicação</th><th>|</th>
-          <th>data cadastro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Julia Santos</td><td>|</td>
-          <td>julia.santos@gmail.com</td><td>|</td>
-          <td>+55 11 92122-5522</td><td>|</td>
-          <td>05/07/1996</td><td>|</td>
-          <td>nenhuma</td><td>|</td>
-          <td>Assistente</td><td>|</td>
-          <td>whatsapp</td><td>|</td>
-          <td>fala</td><td>|</td>
-          <td>02/06/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
+      <!-- DOAÇÃO -->
+      <div class="tabela-box" data-tipo="doacao">
+        <h2>Doação</h2>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Id Doação</th>
+              <th>|</th>
+              <th>Id Beneficiário</th>
+              <th>|</th>
+              <th>Id Doador</th>
+              <th>|</th>
+              <th>Data</th>
+              <th>|</th>
+              <th>Doação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>548720125</td>
+              <td>|</td>
+              <td>998134522</td>
+              <td>|</td>
+              <td>452187990</td>
+              <td>|</td>
+              <td>11/04/2025</td>
+              <td>|</td>
+              <td>Alimentos não perecíveis</td>
+            </tr>
 
-        <tr>
-          <td>Thiago Luz</td><td>|</td>
-          <td>thiago.luz@gmail.com</td><td>|</td>
-          <td>+55 11 93444-2288</td><td>|</td>
-          <td>14/02/1999</td><td>|</td>
-          <td>auditiva leve</td><td>|</td>
-          <td>Apoio Geral</td><td>|</td>
-          <td>email</td><td>|</td>
-          <td>escrita</td><td>|</td>
-          <td>28/06/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+            <tr>
+              <td>874512663</td>
+              <td>|</td>
+              <td>745218003</td>
+              <td>|</td>
+              <td>661209887</td>
+              <td>|</td>
+              <td>23/08/2025</td>
+              <td>|</td>
+              <td>Roupas e calçados</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <!-- DOADOR -->
+      <div class="tabela-box" data-tipo="doador">
+        <h2>doador</h2>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>nome</th>
+              <th>|</th>
+              <th>email</th>
+              <th>|</th>
+              <th>telefone</th>
+              <th>|</th>
+              <th>nascimento</th>
+              <th>|</th>
+              <th>deficiência</th>
+              <th>|</th>
+              <th>interece</th>
+              <th>|</th>
+              <th>preferencia info</th>
+              <th>|</th>
+              <th>comunicação</th>
+              <th>|</th>
+              <th>data cadastro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Marcos Silva</td>
+              <td>|</td>
+              <td>marcos.silva@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 91244-9088</td>
+              <td>|</td>
+              <td>18/09/1984</td>
+              <td>|</td>
+              <td>nenhuma</td>
+              <td>|</td>
+              <td>educação</td>
+              <td>|</td>
+              <td>email</td>
+              <td>|</td>
+              <td>fala</td>
+              <td>|</td>
+              <td>25/04/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
 
+            <tr>
+              <td>Helena Prado</td>
+              <td>|</td>
+              <td>helena.prado@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 98211-2200</td>
+              <td>|</td>
+              <td>09/01/1992</td>
+              <td>|</td>
+              <td>visual leve</td>
+              <td>|</td>
+              <td>saúde</td>
+              <td>|</td>
+              <td>whatsapp</td>
+              <td>|</td>
+              <td>escrita</td>
+              <td>|</td>
+              <td>14/02/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<div class="tabela-container">
+      <!-- BENEFICIÁRIO -->
+      <div class="tabela-box" data-tipo="beneficiario">
+        <h2>beneficiário</h2>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>nome</th>
+              <th>|</th>
+              <th>email</th>
+              <th>|</th>
+              <th>telefone</th>
+              <th>|</th>
+              <th>nascimento</th>
+              <th>|</th>
+              <th>deficiência</th>
+              <th>|</th>
+              <th>interece</th>
+              <th>|</th>
+              <th>preferencia info</th>
+              <th>|</th>
+              <th>comunicação</th>
+              <th>|</th>
+              <th>data cadastro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carla Gomes</td>
+              <td>|</td>
+              <td>carla.gomes@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 95533-1188</td>
+              <td>|</td>
+              <td>29/04/1987</td>
+              <td>|</td>
+              <td>motora leve</td>
+              <td>|</td>
+              <td>alimentação</td>
+              <td>|</td>
+              <td>email</td>
+              <td>|</td>
+              <td>fala</td>
+              <td>|</td>
+              <td>03/07/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
 
-  <!-- DOAÇÃO -->
-  <div class="tabela-box">
-    <h2>Doação</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>Id Doação</th><th>|</th>
-          <th>Id Beneficiário</th><th>|</th>
-          <th>Id Doador</th><th>|</th>
-          <th>Data</th><th>|</th>
-          <th>Doação</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>548720125</td><td>|</td>
-          <td>998134522</td><td>|</td>
-          <td>452187990</td><td>|</td>
-          <td>11/04/2025</td><td>|</td>
-          <td>Alimentos não perecíveis</td>
-        </tr>
+            <tr>
+              <td>Ricardo Moreira</td>
+              <td>|</td>
+              <td>ricardo.moreira@gmail.com</td>
+              <td>|</td>
+              <td>+55 11 97866-4400</td>
+              <td>|</td>
+              <td>10/10/1983</td>
+              <td>|</td>
+              <td>nenhuma</td>
+              <td>|</td>
+              <td>moradia</td>
+              <td>|</td>
+              <td>whatsapp</td>
+              <td>|</td>
+              <td>escrita</td>
+              <td>|</td>
+              <td>12/08/2024</td>
+              <td class="icon-cell">+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <tr>
-          <td>874512663</td><td>|</td>
-          <td>745218003</td><td>|</td>
-          <td>661209887</td><td>|</td>
-          <td>23/08/2025</td><td>|</td>
-          <td>Roupas e calçados</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    </div>
 
-  <!-- DOADOR -->
-  <div class="tabela-box">
-    <h2>doador</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>nome</th><th>|</th>
-          <th>email</th><th>|</th>
-          <th>telefone</th><th>|</th>
-          <th>nascimento</th><th>|</th>
-          <th>deficiência</th><th>|</th>
-          <th>interece</th><th>|</th>
-          <th>preferencia info</th><th>|</th>
-          <th>comunicação</th><th>|</th>
-          <th>data cadastro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Marcos Silva</td><td>|</td>
-          <td>marcos.silva@gmail.com</td><td>|</td>
-          <td>+55 11 91244-9088</td><td>|</td>
-          <td>18/09/1984</td><td>|</td>
-          <td>nenhuma</td><td>|</td>
-          <td>educação</td><td>|</td>
-          <td>email</td><td>|</td>
-          <td>fala</td><td>|</td>
-          <td>25/04/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
+  </main>
 
-        <tr>
-          <td>Helena Prado</td><td>|</td>
-          <td>helena.prado@gmail.com</td><td>|</td>
-          <td>+55 11 98211-2200</td><td>|</td>
-          <td>09/01/1992</td><td>|</td>
-          <td>visual leve</td><td>|</td>
-          <td>saúde</td><td>|</td>
-          <td>whatsapp</td><td>|</td>
-          <td>escrita</td><td>|</td>
-          <td>14/02/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- BENEFICIÁRIO -->
-  <div class="tabela-box">
-    <h2>beneficiário</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>nome</th><th>|</th>
-          <th>email</th><th>|</th>
-          <th>telefone</th><th>|</th>
-          <th>nascimento</th><th>|</th>
-          <th>deficiência</th><th>|</th>
-          <th>interece</th><th>|</th>
-          <th>preferencia info</th><th>|</th>
-          <th>comunicação</th><th>|</th>
-          <th>data cadastro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Carla Gomes</td><td>|</td>
-          <td>carla.gomes@gmail.com</td><td>|</td>
-          <td>+55 11 95533-1188</td><td>|</td>
-          <td>29/04/1987</td><td>|</td>
-          <td>motora leve</td><td>|</td>
-          <td>alimentação</td><td>|</td>
-          <td>email</td><td>|</td>
-          <td>fala</td><td>|</td>
-          <td>03/07/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
-
-        <tr>
-          <td>Ricardo Moreira</td><td>|</td>
-          <td>ricardo.moreira@gmail.com</td><td>|</td>
-          <td>+55 11 97866-4400</td><td>|</td>
-          <td>10/10/1983</td><td>|</td>
-          <td>nenhuma</td><td>|</td>
-          <td>moradia</td><td>|</td>
-          <td>whatsapp</td><td>|</td>
-          <td>escrita</td><td>|</td>
-          <td>12/08/2024</td>
-          <td class="icon-cell">+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-<footer class="footer">
+  <footer class="footer">
     <div class="footer-content">
-        <div class="footer-info">
-            <div class="footer-col">
-                <h4>Endereço</h4>
-                <p>Rua: Casa Kolping, 7888</p>
-                <p>04999-78, São Paulo – SP</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Horário de atendimento</h4>
-                <p>Segunda a Sexta-feira</p>
-                <p>Das 08:30 às 18:30</p>
-            </div>
+      <div class="footer-info">
+        <div class="footer-col">
+          <h4>Endereço</h4>
+          <p>Rua: Casa Kolping, 7888</p>
+          <p>04999-78, São Paulo – SP</p>
         </div>
 
-        <div class="footer-buttons">
-            <button class="footer-btn">
-                <i class="fa-solid fa-envelope"></i> FALE CONOSCO
-            </button>
-            <button class="footer-btn">
-                <i class="fa-solid fa-headphones"></i> OUVIDORIA
-            </button>
+        <div class="footer-col">
+          <h4>Horário de atendimento</h4>
+          <p>Segunda a Sexta-feira</p>
+          <p>Das 08:30 às 18:30</p>
         </div>
+      </div>
 
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+      <div class="footer-buttons">
+        <button class="footer-btn">
+          <i class="fa-solid fa-envelope"></i> FALE CONOSCO
+        </button>
+        <button class="footer-btn">
+          <i class="fa-solid fa-headphones"></i> OUVIDORIA
+        </button>
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
 
     <hr class="footer-separator">
 
     <div class="footer-bottom">
-        <div class="footer-links">
-            <a href="#">Política de Privacidade</a>
-            <span>|</span>
-            <a href="#">Termos de Aceite</a>
-        </div>
-        <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
+      <div class="footer-links">
+        <a href="#">Política de Privacidade</a>
+        <span>|</span>
+        <a href="#">Termos de Aceite</a>
+      </div>
+      <p>© 2025 Casa Kolping. Todos os direitos reservados. Desenvolvido por FiveTech.</p>
     </div>
-</footer>
+  </footer>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- SCRIPT DE FILTRO -->
+  <script>
+    const filterSelect = document.getElementById('filterSelect');
+    const tabelaBoxes = document.querySelectorAll('.tabela-box');
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    filterSelect.addEventListener('change', () => {
+      const filtro = filterSelect.value; // funcionario, voluntario, doacao, doador, beneficiario ou ""
 
+      tabelaBoxes.forEach(box => {
+        const tipo = box.getAttribute('data-tipo');
 
+        // Se não tem filtro (string vazia) → mostra tudo
+        if (!filtro || filtro === "") {
+          box.style.display = 'block';
+        } else {
+          // Se o tipo da box bate com o filtro → mostra, se não → esconde
+          if (tipo === filtro) {
+            box.style.display = 'block';
+          } else {
+            box.style.display = 'none';
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
 
 </html>

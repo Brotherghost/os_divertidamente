@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Fundo geral da página */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* cinza clarinho pra destacar o card branco */
 }
 
+/* HEADER */
 header {
     background-color: #d68741;
     padding: 10px 25px;
@@ -39,7 +42,20 @@ nav {
     font-size: 20px;
     font-weight: bold;
     color: #000; 
-    
+}
+
+.icon-admin {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;   /* tamanho do ícone */
+  padding: 8px;
+  cursor: pointer;
+}
+
+.icon-admin i {
+  color: #000000; 
 }
 
 /* MENU PRINCIPAL */
@@ -92,7 +108,7 @@ nav {
     gap: 15px;
 }
 
-/* Botão "Doe Agora" */
+/* Botão "Doe Agora" (se usar em outras páginas) */
 .botao-doar {
     background-color: #e0954e;
     border: none;
@@ -106,14 +122,6 @@ nav {
 
 .botao-doar:hover {
     background-color: #f0a85a;
-}
-
-/* Ícone de pesquisa */
-.botao-pesquisa {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
 }
 
 /* MENU HAMBÚRGUER */
@@ -168,31 +176,44 @@ nav {
     }
 }
 
+/* ------------------------------------------------------------------
+   ÁREA ADMIN: CARD BRANCO CENTRALIZADO
+-------------------------------------------------------------------*/
 
+.admin-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px 20px 35px;
+  background-color: #ffffff;   /* fundo branco do painel */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-
-
-/*------------------------------------------------------------------------------------------------------------*/
-
-
+/* Campo de busca + filtro */
 .search-filter-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  margin: 40px auto;
+  margin: 20px auto 30px;
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #e49b66;
+  background-color: #ffe1c2;
   border-radius: 25px;
   width: 400px;
   height: 45px;
   padding: 0 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .search-input {
@@ -226,49 +247,48 @@ nav {
 
 /* Estilo do filtro */
 .filter-select {
-  background-color: #e49b66;
+  background-color: #ffe1c2;
   border: none;
   border-radius: 25px;
   padding: 10px 15px;
   font-size: 15px;
   color: #2d2d2d;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   outline: none;
   transition: 0.2s;
 }
 
 .filter-select:hover {
-  background-color: #f1b27b;
+  background-color: #ffd0a1;
 }
 
-
-
-
-
-
+/* ------------------------------------------------------------------
+   TABELAS
+-------------------------------------------------------------------*/
 
 .tabela-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 20px;
+  gap: 25px;
+  padding: 10px 0;
 }
 
 .tabela-box {
-  background-color: #e49b66;
-  border-radius: 20px;
-  padding: 0px 0 20px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 0 0 15px;
   overflow: hidden;
+  border: 1px solid #e0e0e0;
 }
 
 .tabela-box h2 {
   text-align: center;
-  background-color: #b86a3d;
+  background-color: #e49b66;
   color: black;
   padding: 10px;
-  border-radius: 15px 15px 0 0;
-  font-size: 20px;
+  border-radius: 12px 12px 0 0;
+  font-size: 18px;
 }
 
 .tabela {
@@ -279,7 +299,7 @@ nav {
 }
 
 .tabela thead {
-  background-color: #e49b66;
+  background-color: #fff5e8;
   font-weight: bold;
 }
 
@@ -290,7 +310,7 @@ nav {
 }
 
 .tabela tbody tr:nth-child(even) {
-  background-color: #f1b27b;
+  background-color: #fff9f0; /* laranja bem clarinho */
 }
 
 .icon-cell {
@@ -307,27 +327,38 @@ nav {
   transform: scale(1.2);
 }
 
+/* Responsivo para tabelas */
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+  }
 
+  .search-container {
+    width: 100%;
+  }
 
+  .admin-container {
+    padding: 15px 10px 25px;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+  }
 
+  .tabela {
+    font-size: 12px;
+  }
+}
 
-
-
-
-
-/*------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
+/* ------------------------------------------------------------------
+   FOOTER
+-------------------------------------------------------------------*/
 
 .footer {
-  background-color: #4b4a4a; /* cinza escuro */
+  background-color: #4b4a4a;
   color: #fff;
   font-family: Arial, sans-serif;
   padding: 40px 20px 20px;
+  margin-top: 30px;
 }
 
 .footer-content {
@@ -426,12 +457,3 @@ nav {
 .footer-links span {
   opacity: 0.7;
 }
-
-
-
-
-
-
-
-
-
